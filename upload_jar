@@ -1,34 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
-## about the file
-#file_to_upload=mika-1.0.jar
-#bucket=picklepopcorn
-#filepath="/${bucket}/${file_to_upload}"
-#
-## metadata
-#contentType="application/x-compressed-tar"
-#dateValue=`date -R`
-#signature_string="PUT\n\n${contentType}\n${dateValue}\n${filepath}"
-#
-##s3 keys
-#s3_access_key="AKIAWFQZHPEHMIF7TY2T"
-#s3_secret_key="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"
-#
-##prepare signature hash to be sent in Authorization header
-#signature_hash=`echo -en ${signature_string} | openssl sha1 -hmac ${s3_secret_key} -binary | base64`
-#
-## actual curl command to do PUT operation on s3
-#curl -X PUT -T "${file_to_upload}" \
-#  -H "Host: ${bucket}.s3.us-east-2.amazonaws.com" \
-#  -H "Date: ${dateValue}" \
-#  -H "Content-Type: ${contentType}" \
-#  -H "Authorization: AWS ${s3_access_key}:${signature_hash}" \
-#  https://${bucket}.s3.us-east-2.amazonaws.com/${file_to_upload}
-
-#!/bin/sh
-
 usage()
 {
     cat <<USAGE
